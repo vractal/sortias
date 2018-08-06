@@ -1,14 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
+import RemoveButton from './RemoveButton'
+// Film component, name type: string
 
-class Film extends Component {
-  render() {
-    return (
-      <div>
-        <h1>{this.props.name}</h1>
-        <p> Descrição do filme</p>
-      </div>
-    );
-  }
-}
-
-export default Film;
+export default props => (
+  <div>
+    <h1>{props.name}</h1>
+    <RemoveButton name={props.name} removeFilm={props.removeFilm}  />
+    <p> Descrição do filme</p>
+  </div>
+);

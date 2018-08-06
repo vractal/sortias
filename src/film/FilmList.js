@@ -1,20 +1,24 @@
 import React, { Component } from "react";
-import Film from "./Film"
+import Film from "./Film";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+
 
 class FilmList extends Component {
   render() {
     const list = this.props.list;
+    const removeFilm = this.props.removeFilm;
     return (
-      <ul>
+      <List>
         {list.map(film => (
-          <li>
-            <Film name={film.name} />
-          </li>
+          <ListItem>
+
+            <Film name={film.name} removeFilm={removeFilm}></Film>
+          </ListItem>
         ))}
-      </ul>
+      </List>
     );
   }
 }
 
-
-export default FilmList
+export default FilmList;
