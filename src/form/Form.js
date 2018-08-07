@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-
-
+import TextField from "@material-ui/core/TextField";
+import Typography from '@material-ui/core/Typography';
 
 class Form extends Component {
   constructor(props) {
@@ -27,15 +27,15 @@ class Form extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <h1>Insira um filme</h1>
-        <input
+        <Typography variant='headline' Component='h2'>Insira um filme</Typography>
+        <TextField
+          autoFocus
           type="text"
           value={this.state.value}
           onChange={this.handleChange}
         />
-        <input type="submit" value="Enviar" />
-      </form>
 
+      </form>
     );
   }
 }

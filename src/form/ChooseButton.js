@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Choser from "./Choser";
+// import Choser from "./Choser";
 import Button from "@material-ui/core/Button";
 
 class ChooseButton extends Component {
@@ -8,8 +8,8 @@ class ChooseButton extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
   handleClick(event) {
-    const pick = Choser(this.props.list)
-    alert(pick.name)
+    this.props.choser(this.props.list)
+  
     event.preventDefault()
   }
   render() {
