@@ -9,7 +9,7 @@ class FilmList extends Component {
     // const { classes } = this.props;
     const list = this.props.list;
     const removeFilm = this.props.removeFilm;
-    const choiceColor = "#e91e63";
+    const choiceColor = "#239eb1";
 
     return (
       <div>
