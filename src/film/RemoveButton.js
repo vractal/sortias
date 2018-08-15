@@ -10,7 +10,7 @@ class RemoveButton extends Component {
     this.handleClick = this.handleClick.bind(this)
   }
   handleClick(event){
-    this.props.removeFilm(this.props.name);
+    this.props.removeFilm(this.props.id);
     event.preventDefault()
   }
 

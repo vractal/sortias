@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import TextField from "@material-ui/core/TextField";
 import Typography from '@material-ui/core/Typography';
+import { connect } from 'react-redux'
+import { addFilm } from '../actions'
 
 class Form extends Component {
   constructor(props) {
@@ -11,7 +13,9 @@ class Form extends Component {
     this.handleRemove = this.handleRemove.bind(this);
   }
   handleSubmit(event) {
-    this.props.addFilm(this.state.value);
+    debugger
+    this.props.dispatch(addFilm(this.state.value));
+    debugger
     this.setState({ value: "" });
     event.preventDefault();
   }
@@ -27,7 +31,7 @@ class Form extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <Typography variant='headline' Component='h2'>Insira um filme</Typography>
+        <Typography variant='headline' component='h2'>Insira um filme</Typography>
         <TextField
           autoFocus
           type="text"
@@ -40,4 +44,4 @@ class Form extends Component {
   }
 }
 
-export default Form;
+export default connect()(Form);

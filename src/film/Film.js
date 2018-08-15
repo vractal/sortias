@@ -9,7 +9,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 export default ({color='white',...props}) => (
   <ListItem style={{ backgroundColor: color}} elevation={2}>
     <ListItemText>{props.name}{props.color}</ListItemText>
-      <RemoveButton name={props.name} removeFilm={props.removeFilm}   />
+      <RemoveButton id={props.id} removeFilm={props.removeFilm}   />
 
 
   </ListItem>
